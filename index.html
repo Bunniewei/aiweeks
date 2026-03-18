@@ -100,6 +100,7 @@ body {
 .tag-go   { color:var(--accent); border-color:rgba(42,143,168,.28); background:rgba(42,143,168,.07); }
 .tag-wait { color:#e67700; border-color:rgba(230,119,0,.28); background:rgba(230,119,0,.07); }
 .item-name { font-size:clamp(.84rem,1.6vw,1.1rem); font-weight:600; color:var(--ink); letter-spacing:-.01em; line-height:1.3; }
+.item-sub { font-family:'DM Mono',monospace; font-size:clamp(.44rem,.7vw,.54rem); color:var(--mid); letter-spacing:.06em; margin-top:.2rem; line-height:1.5; }
 .item-progress { margin-top:.4rem; }
 .item-prog-label { display:flex; justify-content:space-between; align-items:center; margin-bottom:.25rem; }
 .item-prog-text { font-family:'DM Mono',monospace; font-size:clamp(.45rem,.72vw,.55rem); color:var(--mid); }
@@ -226,7 +227,7 @@ body {
           <div class="cover-stat"><div class="stat-icon">📅</div><div class="stat-label">Date</div><div class="stat-value">2025 / 03 / 18</div></div>
           <div class="cover-stat"><div class="stat-icon">📆</div><div class="stat-label">Period</div><div class="stat-value">03/05 - 03/18</div></div>
           <div class="cover-stat"><div class="stat-icon">✅</div><div class="stat-label">Completed</div><div class="stat-value">4 Tasks</div></div>
-          <div class="cover-stat"><div class="stat-icon">🎯</div><div class="stat-label">Upcoming</div><div class="stat-value">3 Tasks</div></div>
+          <div class="cover-stat"><div class="stat-icon">🎯</div><div class="stat-label">Upcoming</div><div class="stat-value">4 Tasks</div></div>
         </div>
       </div>
     </div>
@@ -242,6 +243,7 @@ body {
           <div class="item-header">
             <div class="item-top-row"><div style="display:flex;align-items:center;gap:.5rem;"><div class="item-icon">🤖</div><div class="item-idx">01</div></div><span class="item-tag tag-done">持續進行</span></div>
             <div class="item-name">GPT 後台管理與論壇審核</div>
+            <div class="item-sub">每日審核 AI 自動回覆 · 品質把關 · 持續優化</div>
             <div class="item-progress"><div class="item-prog-label"><span class="item-prog-text">執行進度</span><span class="item-prog-pct">持續進行中</span></div><div class="item-prog-track"><div class="item-prog-fill" style="width:80%"></div></div></div>
             <div class="item-bottom"><div class="item-hint">// click to expand</div><span class="item-arrow">▼</span></div>
           </div>
@@ -251,6 +253,7 @@ body {
           <div class="item-header">
             <div class="item-top-row"><div style="display:flex;align-items:center;gap:.5rem;"><div class="item-icon">📚</div><div class="item-idx">02</div></div><span class="item-tag tag-done">✓ 完成</span></div>
             <div class="item-name">WinWay-GPT 題庫建置</div>
+            <div class="item-sub">多類型題目建置 · 品質優化 · 涵蓋率提升</div>
             <div class="item-progress"><div class="item-prog-label"><span class="item-prog-text">執行進度</span><span class="item-prog-pct">100%</span></div><div class="item-prog-track"><div class="item-prog-fill" style="width:100%"></div></div></div>
             <div class="item-bottom"><div class="item-hint">// click to expand</div><span class="item-arrow">▼</span></div>
           </div>
@@ -260,6 +263,7 @@ body {
           <div class="item-header">
             <div class="item-top-row"><div style="display:flex;align-items:center;gap:.5rem;"><div class="item-icon">🔄</div><div class="item-idx">03</div></div><span class="item-tag tag-done">✓ 完成</span></div>
             <div class="item-name">LLM 與 JSON 格式轉換</div>
+            <div class="item-sub">非結構化資料 → 標準 JSON · Prompt 工程 · 自動化</div>
             <div class="item-progress"><div class="item-prog-label"><span class="item-prog-text">執行進度</span><span class="item-prog-pct">100%</span></div><div class="item-prog-track"><div class="item-prog-fill" style="width:100%"></div></div></div>
             <div class="item-bottom"><div class="item-hint">// click to expand</div><span class="item-arrow">▼</span></div>
           </div>
@@ -269,6 +273,7 @@ body {
           <div class="item-header">
             <div class="item-top-row"><div style="display:flex;align-items:center;gap:.5rem;"><div class="item-icon">🌐</div><div class="item-idx">04</div></div><span class="item-tag tag-done">✓ 完成</span></div>
             <div class="item-name">HTML 網頁開發</div>
+            <div class="item-sub">localStorage · Google Maps · 行程清單 · RWD</div>
             <div class="item-progress"><div class="item-prog-label"><span class="item-prog-text">執行進度</span><span class="item-prog-pct">100%</span></div><div class="item-prog-track"><div class="item-prog-fill" style="width:100%"></div></div></div>
             <div class="item-bottom"><div class="item-hint">// click to expand</div><span class="item-arrow">▼</span></div>
           </div>
@@ -288,6 +293,7 @@ body {
           <div class="item-header">
             <div class="item-top-row"><div style="display:flex;align-items:center;gap:.5rem;"><div class="item-icon">🐍</div><div class="item-idx">01</div></div><span class="item-tag tag-go">進行中</span></div>
             <div class="item-name">Python 自動化開發</div>
+            <div class="item-sub">套件學習 · 腳本撰寫 · 日常流程自動化</div>
             <div class="item-progress"><div class="item-prog-label"><span class="item-prog-text">執行進度</span><span class="item-prog-pct">30%</span></div><div class="item-prog-track"><div class="item-prog-fill" style="width:30%"></div></div></div>
             <div class="item-bottom"><div class="item-hint">// click to expand</div><span class="item-arrow">▼</span></div>
           </div>
@@ -297,6 +303,7 @@ body {
           <div class="item-header">
             <div class="item-top-row"><div style="display:flex;align-items:center;gap:.5rem;"><div class="item-icon">⚡</div><div class="item-idx">02</div></div><span class="item-tag tag-wait">待開始</span></div>
             <div class="item-name">LLM + Python 簡單自動化</div>
+            <div class="item-sub">API 串接 · 自動摘要 · 文字分類 · 自動回覆</div>
             <div class="item-progress"><div class="item-prog-label"><span class="item-prog-text">執行進度</span><span class="item-prog-pct">0%</span></div><div class="item-prog-track"><div class="item-prog-fill" style="width:0%"></div></div></div>
             <div class="item-bottom"><div class="item-hint">// click to expand</div><span class="item-arrow">▼</span></div>
           </div>
@@ -305,11 +312,22 @@ body {
         <div class="item" onclick="toggleItem(this)">
           <div class="item-header">
             <div class="item-top-row"><div style="display:flex;align-items:center;gap:.5rem;"><div class="item-icon">🌐</div><div class="item-idx">03</div></div><span class="item-tag tag-wait">待開始</span></div>
-            <div class="item-name">HTML 進階 — 互動功能學習</div>
+            <div class="item-name">HTML 進階 — 互動功能</div>
+            <div class="item-sub">Fetch API · Modal 彈窗 · Drag & Drop 拖曳排序</div>
             <div class="item-progress"><div class="item-prog-label"><span class="item-prog-text">執行進度</span><span class="item-prog-pct">0%</span></div><div class="item-prog-track"><div class="item-prog-fill" style="width:0%"></div></div></div>
             <div class="item-bottom"><div class="item-hint">// click to expand</div><span class="item-arrow">▼</span></div>
           </div>
           <div class="item-body"><div class="item-desc">學習 HTML / JS 進階互動功能，包含 Fetch API 串接外部資料、Modal 彈出視窗、拖曳排序，強化網頁互動體驗。</div></div>
+        </div>
+        <div class="item" onclick="toggleItem(this)">
+          <div class="item-header">
+            <div class="item-top-row"><div style="display:flex;align-items:center;gap:.5rem;"><div class="item-icon">📊</div><div class="item-idx">04</div></div><span class="item-tag tag-wait">待開始</span></div>
+            <div class="item-name">Chart.js 資料視覺化</div>
+            <div class="item-sub">長條圖 · 折線圖 · 圓餅圖 · 動態資料呈現</div>
+            <div class="item-progress"><div class="item-prog-label"><span class="item-prog-text">執行進度</span><span class="item-prog-pct">0%</span></div><div class="item-prog-track"><div class="item-prog-fill" style="width:0%"></div></div></div>
+            <div class="item-bottom"><div class="item-hint">// click to expand</div><span class="item-arrow">▼</span></div>
+          </div>
+          <div class="item-body"><div class="item-desc">學習 Chart.js 製作互動式圖表，將資料以長條圖、折線圖、圓餅圖等方式呈現，結合 HTML 頁面進行資料視覺化。</div></div>
         </div>
       </div>
     </div>
@@ -325,7 +343,7 @@ body {
       </div>
       <div class="prob-card" onclick="toggleProb(this)">
         <div class="prob-top"><div class="prob-icon">🔧</div><span class="p-lbl lbl-i">ISSUE</span><span class="p-txt">HTML 結構標籤未正確關閉，導致區塊跑到每個頁面都顯示。</span><span class="p-arr">▼</span></div>
-        <div class="prob-bot"><div class="prob-icon">✅</div><span class="p-lbl lbl-s">SOLVE</span><span class="p-sol">逐層檢查 div 的開合，找到頁面提早關閉 page 的問題，將 Final Message 移回正確的父層內。</span></div>
+        <div class="prob-bot"><div class="prob-icon">✅</div><span class="p-lbl lbl-s">SOLVE</span><span class="p-sol">逐層檢查 div 的開合，找到 Day 5 頁面提早關閉 day-page 的問題，將 Final Message 移回正確的父層內。</span></div>
       </div>
       <div class="prob-card" onclick="toggleProb(this)">
         <div class="prob-top"><div class="prob-icon">💾</div><span class="p-lbl lbl-i">ISSUE</span><span class="p-txt">重新整理後自訂清單與勾選狀態全部消失，使用體驗不佳。</span><span class="p-arr">▼</span></div>
@@ -338,7 +356,7 @@ body {
   <div class="slide">
     <div class="slide-inner">
       <div class="sec-chip">04 · AI Trend · 2026.03</div>
-      <div class="slide-title"><div class="title-bar"></div>AI 趨勢/工具分享</div>
+      <div class="slide-title"><div class="title-bar"></div>AI 趨勢工具分享</div>
       <div class="ai-wrap">
         <div class="ai-topbar"></div>
         <div class="ai-body">
@@ -354,12 +372,14 @@ body {
               <div class="ai-stat-item"><div class="ai-stat-val">30億</div><div class="ai-stat-lbl">每日活躍用戶</div></div>
             </div>
           </div>
-          <div class="ai-desc">Meta AI 動態不斷——訓練晶片「Olympus」夭折後，快速轉向：自研 MTIA 推理晶片全速推進（2027 前出四代、算力提升 25 倍）、Llama 4 轉型、下一代閉源模型 Avocado 開發中，同時斥資千億補強 Nvidia / AMD / Google 算力，2026 年宣示為「AI 加速年」。</div>
+          <div class="ai-desc">Meta AI 動態不斷——訓練晶片「Olympus」夭折後，快速轉向：自研 MTIA 推理晶片全速推進（2027 前出四代、算力提升 25 倍）、Llama 4 模型開源釋出、下一代模型 Avocado 開發中，同時斥資千億補強 Nvidia / AMD / Google 算力，2026 年宣示為「AI 加速年」。</div>
           <div class="ai-grid">
             <div class="ai-pt"><div class="ai-pt-icon">💀</div><span>Olympus 高階訓練晶片夭折，設計瓶頸難克服，改與 Nvidia、AMD、Google 擴大合作</span></div>
             <div class="ai-pt"><div class="ai-pt-icon">⚡</div><span>MTIA 推理晶片繼續做！300→500 四代兩年內推出，算力整體提升 25 倍</span></div>
             <div class="ai-pt"><div class="ai-pt-icon">🦙</div><span>Llama 4 已釋出（Scout / Maverick），下一代閉源模型 Avocado 開發中</span></div>
             <div class="ai-pt"><div class="ai-pt-icon">🧠</div><span>成立 Meta Superintelligence Labs，挖角 OpenAI／Google 人才，目標打造「個人超智能 AI」</span></div>
+            <div class="ai-pt"><div class="ai-pt-icon">💰</div><span>2026 年資本支出預計 1,150～1,350 億美元，是 2025 年的 1.6 倍，五大科技巨頭中排第四</span></div>
+            <div class="ai-pt"><div class="ai-pt-icon">🔄</div><span>策略轉型：訓練外包給 Nvidia / AMD，推論自控；開源 Llama 轉向閉源 Avocado，防技術外流</span></div>
           </div>
         </div>
       </div>
