@@ -19,8 +19,6 @@ body {
   display: flex; flex-direction: column; height: 100vh;
   overflow: hidden; position: relative;
 }
-
-/* BG */
 .bg-layer { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
 .bg-grid {
   position: absolute; inset: 0;
@@ -34,19 +32,13 @@ body {
 .bg-orb1 { position:absolute; top:-120px; right:-120px; width:500px; height:500px; background:radial-gradient(circle,rgba(42,143,168,.12) 0%,transparent 68%); animation:orbFloat 8s ease-in-out infinite; }
 .bg-orb2 { position:absolute; bottom:-80px; left:-80px; width:360px; height:360px; background:radial-gradient(circle,rgba(61,189,170,.08) 0%,transparent 68%); animation:orbFloat 10s ease-in-out infinite reverse; }
 @keyframes orbFloat { 0%,100%{transform:translate(0,0)} 50%{transform:translate(20px,-20px)} }
-
-/* Progress */
 .progress-bar { height: 3px; background: var(--border); flex-shrink: 0; z-index: 20; position: relative; overflow: hidden; }
 .progress-fill { height: 100%; background: linear-gradient(90deg,var(--accent),var(--accent2)); transition: width .45s cubic-bezier(.4,0,.2,1); box-shadow: 0 0 10px var(--accent); }
-
-/* Slides */
 .slides-wrapper { flex:1; position:relative; overflow:hidden; z-index:1; }
 .slide { position:absolute; inset:0; display:flex; align-items:flex-start; justify-content:center; padding:clamp(.8rem,2vw,2rem); opacity:0; pointer-events:none; transition:opacity .4s ease,transform .4s cubic-bezier(.4,0,.2,1); transform:translateX(40px); overflow-y:auto; }
 .slide.active { opacity:1; pointer-events:all; transform:translateX(0); }
 .slide.exit-left { opacity:0; transform:translateX(-40px); pointer-events:none; }
 .slide-inner { width:100%; max-width:min(1100px,96vw); margin:auto 0; }
-
-/* Nav */
 .nav-bar { display:flex; align-items:center; justify-content:space-between; padding:clamp(.6rem,1.5vw,1rem) clamp(1rem,3vw,2.5rem); border-top:1px solid rgba(42,143,168,.2); background:rgba(245,248,250,.95); backdrop-filter:blur(20px); flex-shrink:0; z-index:20; position:relative; }
 .nav-btn { background:var(--surface); border:1px solid rgba(42,143,168,.25); color:var(--ink); font-family:'DM Mono',monospace; font-size:clamp(.6rem,1.1vw,.72rem); letter-spacing:.07em; padding:clamp(.4rem,.8vw,.55rem) clamp(.8rem,1.5vw,1.1rem); border-radius:6px; cursor:pointer; transition:all .25s; min-width:clamp(70px,8vw,90px); position:relative; overflow:hidden; }
 .nav-btn-fill { position:absolute; inset:0; background:linear-gradient(135deg,var(--accent),var(--accent2)); opacity:0; transition:opacity .25s; }
@@ -59,30 +51,23 @@ body {
 .nav-dot { width:7px; height:7px; border-radius:50%; background:var(--border); cursor:pointer; transition:all .25s; }
 .nav-dot.active { background:var(--accent); width:22px; border-radius:4px; box-shadow:0 0 8px rgba(42,143,168,.5); }
 .nav-counter { font-family:'DM Mono',monospace; font-size:clamp(.55rem,.9vw,.65rem); color:var(--mid); letter-spacing:.12em; }
-
-/* ══ COVER ══ */
 .cover-card { background:var(--surface); border:1px solid rgba(42,143,168,.2); border-radius:18px; padding:clamp(1.8rem,4vw,3rem); position:relative; overflow:hidden; box-shadow:0 4px 40px rgba(42,143,168,.1); }
 .cover-top-line { position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--accent),var(--accent2),var(--deep)); animation:lineGlow 3s ease-in-out infinite; }
 @keyframes lineGlow { 0%,100%{box-shadow:0 0 6px rgba(42,143,168,.4)} 50%{box-shadow:0 0 18px rgba(42,143,168,.8),0 0 32px rgba(61,189,170,.3)} }
 .cover-glow { position:absolute; top:-80px; right:-80px; width:300px; height:300px; background:radial-gradient(circle,rgba(42,143,168,.08) 0%,transparent 70%); pointer-events:none; animation:orbFloat 6s ease-in-out infinite; }
-
 .cover-top { display:flex; align-items:flex-start; justify-content:space-between; gap:1.5rem; margin-bottom:clamp(1.4rem,2.5vw,2rem); }
-.cover-left {}
 .cover-chip { display:inline-flex; align-items:center; gap:.4rem; background:linear-gradient(135deg,rgba(42,143,168,.1),rgba(61,189,170,.08)); border:1px solid rgba(42,143,168,.25); color:var(--accent); font-family:'DM Mono',monospace; font-size:clamp(.55rem,.9vw,.65rem); letter-spacing:.14em; padding:.28rem .8rem; border-radius:20px; margin-bottom:clamp(.8rem,1.5vw,1rem); }
 .chip-dot { width:6px; height:6px; border-radius:50%; background:var(--accent2); box-shadow:0 0 6px var(--accent2); animation:pulse 1.8s ease infinite; }
 @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.3;transform:scale(.7)} }
 .cover-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2.8rem,6vw,5.5rem); font-weight:600; color:var(--deep); line-height:1; margin-bottom:.4rem; letter-spacing:-.01em; }
 .cover-title .grad { background:linear-gradient(135deg,var(--accent),var(--accent2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
 .cover-sub { font-family:'DM Mono',monospace; font-size:clamp(.65rem,1.1vw,.8rem); color:var(--mid); letter-spacing:.06em; }
-
-/* Summary circles */
 .cover-circles { display:flex; gap:clamp(.8rem,1.5vw,1.2rem); flex-shrink:0; align-items:center; }
 .c-circle { display:flex; flex-direction:column; align-items:center; justify-content:center; width:clamp(72px,9vw,100px); height:clamp(72px,9vw,100px); border-radius:50%; position:relative; }
 .c-circle svg { position:absolute; inset:0; width:100%; height:100%; transform:rotate(-90deg); }
 .c-circle-inner { position:relative; z-index:1; text-align:center; }
 .c-num { font-family:'DM Mono',monospace; font-size:clamp(1.2rem,2.2vw,1.8rem); font-weight:700; color:var(--deep); line-height:1; }
 .c-label { font-family:'DM Mono',monospace; font-size:clamp(.42rem,.65vw,.52rem); color:var(--mid); letter-spacing:.1em; margin-top:.1rem; }
-
 .cover-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(.5rem,1.2vw,.8rem); }
 .cover-stat { background:var(--frost); border:1px solid var(--border); border-radius:10px; padding:clamp(.6rem,1.2vw,.9rem); position:relative; overflow:hidden; transition:transform .2s,box-shadow .2s; }
 .cover-stat:hover { transform:translateY(-2px); box-shadow:0 4px 14px var(--glow); }
@@ -90,21 +75,16 @@ body {
 .stat-icon { font-size:clamp(1rem,1.8vw,1.3rem); margin-bottom:.25rem; }
 .stat-label { font-family:'DM Mono',monospace; font-size:clamp(.45rem,.75vw,.55rem); color:var(--mid); letter-spacing:.15em; text-transform:uppercase; margin-bottom:.2rem; }
 .stat-value { font-size:clamp(.82rem,1.5vw,1rem); font-weight:600; color:var(--deep); }
-
-/* ══ SECTION ══ */
 .sec-chip { display:inline-flex; align-items:center; gap:.35rem; font-family:'DM Mono',monospace; font-size:clamp(.52rem,.85vw,.62rem); letter-spacing:.16em; color:var(--accent); margin-bottom:.35rem; text-transform:uppercase; }
 .sec-chip::before { content:'◆'; font-size:.42rem; animation:diamondPulse 2s ease infinite; }
 @keyframes diamondPulse { 0%,100%{opacity:1} 50%{opacity:.4} }
 .slide-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,4vw,3rem); font-weight:600; color:var(--deep); margin-bottom:clamp(.9rem,1.8vw,1.3rem); letter-spacing:-.01em; display:flex; align-items:center; gap:.65rem; }
 .title-bar { width:3px; height:clamp(1.4rem,2.8vw,2rem); background:linear-gradient(180deg,var(--accent),var(--accent2)); border-radius:2px; flex-shrink:0; animation:barGlow 2s ease-in-out infinite; }
 @keyframes barGlow { 0%,100%{box-shadow:0 0 4px rgba(42,143,168,.3)} 50%{box-shadow:0 0 14px rgba(42,143,168,.7)} }
-
-/* ══ ITEMS ══ */
 .item-list { display:grid; grid-template-columns:repeat(2,1fr); gap:clamp(.5rem,1vw,.8rem); }
 .item { background:var(--surface); border:1px solid var(--border); border-radius:12px; overflow:hidden; cursor:pointer; transition:border-color .25s,box-shadow .25s,transform .25s; box-shadow:0 1px 4px rgba(0,0,0,.04); position:relative; display:flex; flex-direction:column; }
 .item:hover { border-color:rgba(42,143,168,.35); box-shadow:0 6px 20px var(--glow); transform:translateY(-3px); }
 .item.open { border-color:rgba(42,143,168,.45); box-shadow:0 6px 24px var(--glow); }
-
 .item-header { display:flex; flex-direction:column; padding:clamp(.9rem,1.6vw,1.2rem); gap:.7rem; flex:1; }
 .item-top-row { display:flex; align-items:center; justify-content:space-between; gap:.5rem; }
 .item-icon { font-size:clamp(1.4rem,2.5vw,1.8rem); line-height:1; }
@@ -113,10 +93,7 @@ body {
 .tag-done { color:#087f5b; border-color:rgba(8,127,91,.25); background:rgba(8,127,91,.07); }
 .tag-go   { color:var(--accent); border-color:rgba(42,143,168,.28); background:rgba(42,143,168,.07); }
 .tag-wait { color:#e67700; border-color:rgba(230,119,0,.28); background:rgba(230,119,0,.07); }
-
 .item-name { font-size:clamp(.84rem,1.6vw,1.1rem); font-weight:600; color:var(--ink); letter-spacing:-.01em; line-height:1.3; }
-
-/* Progress bar in card */
 .item-progress { margin-top:.4rem; }
 .item-prog-label { display:flex; justify-content:space-between; align-items:center; margin-bottom:.25rem; }
 .item-prog-text { font-family:'DM Mono',monospace; font-size:clamp(.45rem,.72vw,.55rem); color:var(--mid); }
@@ -125,24 +102,18 @@ body {
 .item-prog-fill { height:100%; border-radius:4px; background:linear-gradient(90deg,var(--accent),var(--accent2)); transition:width 1s cubic-bezier(.4,0,.2,1); position:relative; }
 .item-prog-fill::after { content:''; position:absolute; top:0; right:0; width:8px; height:100%; background:rgba(255,255,255,.5); border-radius:50%; animation:progShimmer 2s ease-in-out infinite; }
 @keyframes progShimmer { 0%,100%{opacity:0} 50%{opacity:1} }
-
 .item-bottom { display:flex; align-items:center; justify-content:space-between; margin-top:.35rem; }
 .item-hint { font-family:'DM Mono',monospace; font-size:clamp(.46rem,.72vw,.56rem); color:var(--mid); }
 .item-arrow { font-size:.6rem; color:var(--mid); transition:transform .3s,color .2s; }
 .item.open .item-arrow { transform:rotate(180deg); color:var(--accent); }
-
 .item-body { max-height:0; overflow:hidden; transition:max-height .4s cubic-bezier(.4,0,.2,1),padding .3s; padding:0 clamp(.9rem,1.6vw,1.2rem); background:linear-gradient(135deg,rgba(42,143,168,.04),rgba(61,189,170,.03)); }
 .item.open .item-body { max-height:200px; padding:clamp(.6rem,1vw,.8rem) clamp(.9rem,1.6vw,1.2rem) clamp(.7rem,1.2vw,.9rem); border-top:1px solid rgba(42,143,168,.1); }
 .item-desc { font-size:clamp(.82rem,1.4vw,1rem); color:#2a3d4a; line-height:1.75; }
-
-/* Stagger */
 .item:nth-child(1){animation:itemReveal .4s .05s ease both}
 .item:nth-child(2){animation:itemReveal .4s .1s ease both}
 .item:nth-child(3){animation:itemReveal .4s .15s ease both}
 .item:nth-child(4){animation:itemReveal .4s .2s ease both}
 @keyframes itemReveal { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
-
-/* ══ PROBLEM CARDS ══ */
 .prob-hint { font-family:'DM Mono',monospace; font-size:clamp(.5rem,.8vw,.6rem); color:var(--mid); letter-spacing:.08em; margin-bottom:clamp(.55rem,1vw,.75rem); display:flex; align-items:center; gap:.35rem; }
 .prob-hint::before { content:'◆'; color:var(--accent); font-size:.4rem; }
 .prob-card { border:1px solid var(--border); border-radius:10px; overflow:hidden; margin-bottom:clamp(.4rem,.8vw,.55rem); cursor:pointer; transition:border-color .25s,box-shadow .25s,transform .2s; box-shadow:0 1px 4px rgba(0,0,0,.04); background:var(--surface); }
@@ -162,8 +133,6 @@ body {
 .prob-bot { max-height:0; overflow:hidden; transition:max-height .4s cubic-bezier(.4,0,.2,1),padding .3s; padding:0 clamp(.8rem,1.6vw,1.1rem); display:flex; gap:clamp(.5rem,.9vw,.7rem); align-items:flex-start; background:linear-gradient(135deg,rgba(8,127,91,.05),rgba(42,143,168,.03)); }
 .prob-card.open .prob-bot { max-height:130px; padding:clamp(.65rem,1.2vw,.85rem) clamp(.8rem,1.6vw,1.1rem); border-top:1px solid rgba(8,127,91,.15); }
 .p-sol { font-size:clamp(.82rem,1.4vw,1rem); color:#064e35; line-height:1.72; }
-
-/* ══ AI CARD ══ */
 .ai-wrap { border-radius:14px; overflow:hidden; border:1px solid rgba(42,143,168,.25); box-shadow:0 8px 40px rgba(42,143,168,.12); }
 .ai-topbar { height:3px; background:linear-gradient(90deg,var(--accent),var(--accent2),var(--deep)); animation:lineGlow 3s ease-in-out infinite; }
 .ai-body { background:linear-gradient(135deg,#eef6fa 0%,#e8f5f2 60%,#eef4f8 100%); padding:clamp(1.3rem,2.8vw,2rem); position:relative; overflow:hidden; }
@@ -176,21 +145,16 @@ body {
 @keyframes starSpin { 0%{transform:rotate(0)} 100%{transform:rotate(360deg)} }
 .ai-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,3.8vw,3rem); font-weight:600; color:var(--deep); letter-spacing:-.01em; line-height:1.1; }
 .ai-title .grad { background:linear-gradient(135deg,var(--accent),var(--accent2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-
-/* AI stats mini */
 .ai-stats { display:flex; flex-direction:column; gap:.5rem; flex-shrink:0; }
 .ai-stat-item { background:rgba(255,255,255,.7); border:1px solid rgba(42,143,168,.15); border-radius:8px; padding:.5rem .8rem; min-width:100px; }
 .ai-stat-val { font-family:'DM Mono',monospace; font-size:clamp(1rem,1.8vw,1.4rem); font-weight:700; color:var(--accent); line-height:1; }
 .ai-stat-lbl { font-family:'DM Mono',monospace; font-size:clamp(.42rem,.65vw,.52rem); color:var(--mid); letter-spacing:.1em; margin-top:.15rem; }
-
 .ai-desc { font-size:clamp(.85rem,1.4vw,1.05rem); line-height:1.82; color:#1e3040; margin-bottom:1rem; padding:clamp(.6rem,1.1vw,.8rem) clamp(.8rem,1.5vw,1rem); background:rgba(255,255,255,.6); border-radius:8px; border-left:3px solid var(--accent); }
 .ai-grid { display:grid; grid-template-columns:1fr 1fr; gap:clamp(.4rem,.8vw,.55rem); }
 .ai-pt { background:rgba(255,255,255,.68); border:1px solid rgba(42,143,168,.1); border-radius:8px; padding:clamp(.5rem,.95vw,.7rem) clamp(.65rem,1.1vw,.85rem); font-size:clamp(.8rem,1.3vw,.9rem); color:#1c3040; line-height:1.55; display:flex; gap:.5rem; align-items:flex-start; transition:border-color .2s,box-shadow .2s,transform .2s; }
 .ai-pt:hover { border-color:rgba(42,143,168,.3); box-shadow:0 3px 10px var(--glow); transform:translateY(-2px); }
 .ai-pt-icon { font-size:clamp(.9rem,1.5vw,1.1rem); flex-shrink:0; margin-top:.05rem; }
-
 .key-hint { position:fixed; bottom:clamp(52px,8vh,70px); right:clamp(1rem,2vw,1.5rem); font-family:'DM Mono',monospace; font-size:clamp(.5rem,.75vw,.6rem); color:var(--mid); opacity:.4; letter-spacing:.05em; z-index:5; }
-
 @media (min-width:1400px) { .slide-inner { max-width:1280px; } }
 @media (max-width:768px) {
   .cover-top { flex-direction:column; }
@@ -262,83 +226,42 @@ body {
       <div class="sec-chip">01 · Completed · 03/05 – 03/18</div>
       <div class="slide-title"><div class="title-bar"></div>過去兩周完成事項</div>
       <div class="item-list">
-
         <div class="item" onclick="toggleItem(this)">
           <div class="item-header">
-            <div class="item-top-row">
-              <div style="display:flex;align-items:center;gap:.5rem;">
-                <div class="item-icon">🤖</div>
-                <div class="item-idx">01</div>
-              </div>
-              <span class="item-tag tag-done">持續進行</span>
-            </div>
+            <div class="item-top-row"><div style="display:flex;align-items:center;gap:.5rem;"><div class="item-icon">🤖</div><div class="item-idx">01</div></div><span class="item-tag tag-done">持續進行</span></div>
             <div class="item-name">GPT 後台管理與論壇審核</div>
-            <div class="item-progress">
-              <div class="item-prog-label"><span class="item-prog-text">執行進度</span><span class="item-prog-pct">持續進行中</span></div>
-              <div class="item-prog-track"><div class="item-prog-fill" style="width:80%"></div></div>
-            </div>
+            <div class="item-progress"><div class="item-prog-label"><span class="item-prog-text">執行進度</span><span class="item-prog-pct">持續進行中</span></div><div class="item-prog-track"><div class="item-prog-fill" style="width:80%"></div></div></div>
             <div class="item-bottom"><div class="item-hint">// click to expand</div><span class="item-arrow">▼</span></div>
           </div>
           <div class="item-body"><div class="item-desc">對自動回流之問題進行審核，並持續優化內容品質，確保論壇回覆的準確性與一致性。</div></div>
         </div>
-
         <div class="item" onclick="toggleItem(this)">
           <div class="item-header">
-            <div class="item-top-row">
-              <div style="display:flex;align-items:center;gap:.5rem;">
-                <div class="item-icon">📚</div>
-                <div class="item-idx">02</div>
-              </div>
-              <span class="item-tag tag-done">✓ 完成</span>
-            </div>
+            <div class="item-top-row"><div style="display:flex;align-items:center;gap:.5rem;"><div class="item-icon">📚</div><div class="item-idx">02</div></div><span class="item-tag tag-done">✓ 完成</span></div>
             <div class="item-name">WinWay-GPT 題庫建置</div>
-            <div class="item-progress">
-              <div class="item-prog-label"><span class="item-prog-text">執行進度</span><span class="item-prog-pct">100%</span></div>
-              <div class="item-prog-track"><div class="item-prog-fill" style="width:100%"></div></div>
-            </div>
+            <div class="item-progress"><div class="item-prog-label"><span class="item-prog-text">執行進度</span><span class="item-prog-pct">100%</span></div><div class="item-prog-track"><div class="item-prog-fill" style="width:100%"></div></div></div>
             <div class="item-bottom"><div class="item-hint">// click to expand</div><span class="item-arrow">▼</span></div>
           </div>
           <div class="item-body"><div class="item-desc">進行各類型題庫建置，並優化與擴充內容品質，提升題目多樣性與涵蓋率。</div></div>
         </div>
-
         <div class="item" onclick="toggleItem(this)">
           <div class="item-header">
-            <div class="item-top-row">
-              <div style="display:flex;align-items:center;gap:.5rem;">
-                <div class="item-icon">🔄</div>
-                <div class="item-idx">03</div>
-              </div>
-              <span class="item-tag tag-done">✓ 完成</span>
-            </div>
+            <div class="item-top-row"><div style="display:flex;align-items:center;gap:.5rem;"><div class="item-icon">🔄</div><div class="item-idx">03</div></div><span class="item-tag tag-done">✓ 完成</span></div>
             <div class="item-name">LLM 與 JSON 格式轉換</div>
-            <div class="item-progress">
-              <div class="item-prog-label"><span class="item-prog-text">執行進度</span><span class="item-prog-pct">100%</span></div>
-              <div class="item-prog-track"><div class="item-prog-fill" style="width:100%"></div></div>
-            </div>
+            <div class="item-progress"><div class="item-prog-label"><span class="item-prog-text">執行進度</span><span class="item-prog-pct">100%</span></div><div class="item-prog-track"><div class="item-prog-fill" style="width:100%"></div></div></div>
             <div class="item-bottom"><div class="item-hint">// click to expand</div><span class="item-arrow">▼</span></div>
           </div>
           <div class="item-body"><div class="item-desc">結合 LLM 技術，將非結構化資料轉換為標準化 JSON 格式，提升資料處理效率與可維護性。</div></div>
         </div>
-
         <div class="item" onclick="toggleItem(this)">
           <div class="item-header">
-            <div class="item-top-row">
-              <div style="display:flex;align-items:center;gap:.5rem;">
-                <div class="item-icon">🌐</div>
-                <div class="item-idx">04</div>
-              </div>
-              <span class="item-tag tag-done">✓ 完成</span>
-            </div>
+            <div class="item-top-row"><div style="display:flex;align-items:center;gap:.5rem;"><div class="item-icon">🌐</div><div class="item-idx">04</div></div><span class="item-tag tag-done">✓ 完成</span></div>
             <div class="item-name">HTML 網頁開發</div>
-            <div class="item-progress">
-              <div class="item-prog-label"><span class="item-prog-text">執行進度</span><span class="item-prog-pct">100%</span></div>
-              <div class="item-prog-track"><div class="item-prog-fill" style="width:100%"></div></div>
-            </div>
+            <div class="item-progress"><div class="item-prog-label"><span class="item-prog-text">執行進度</span><span class="item-prog-pct">100%</span></div><div class="item-prog-track"><div class="item-prog-fill" style="width:100%"></div></div></div>
             <div class="item-bottom"><div class="item-hint">// click to expand</div><span class="item-arrow">▼</span></div>
           </div>
           <div class="item-body"><div class="item-desc">完成行程頁面、清單開發與功能擴充，加入 localStorage 記憶功能、Google Maps 連結紀錄器。</div></div>
         </div>
-
       </div>
     </div>
   </div>
@@ -349,45 +272,24 @@ body {
       <div class="sec-chip">02 · Upcoming · 03/19 – 04/02</div>
       <div class="slide-title"><div class="title-bar"></div>未來兩周計畫</div>
       <div class="item-list">
-
         <div class="item" onclick="toggleItem(this)">
           <div class="item-header">
-            <div class="item-top-row">
-              <div style="display:flex;align-items:center;gap:.5rem;">
-                <div class="item-icon">🐍</div>
-                <div class="item-idx">01</div>
-              </div>
-              <span class="item-tag tag-go">進行中</span>
-            </div>
+            <div class="item-top-row"><div style="display:flex;align-items:center;gap:.5rem;"><div class="item-icon">🐍</div><div class="item-idx">01</div></div><span class="item-tag tag-go">進行中</span></div>
             <div class="item-name">Python 自動化開發</div>
-            <div class="item-progress">
-              <div class="item-prog-label"><span class="item-prog-text">執行進度</span><span class="item-prog-pct">30%</span></div>
-              <div class="item-prog-track"><div class="item-prog-fill" style="width:30%"></div></div>
-            </div>
+            <div class="item-progress"><div class="item-prog-label"><span class="item-prog-text">執行進度</span><span class="item-prog-pct">30%</span></div><div class="item-prog-track"><div class="item-prog-fill" style="width:30%"></div></div></div>
             <div class="item-bottom"><div class="item-hint">// click to expand</div><span class="item-arrow">▼</span></div>
           </div>
           <div class="item-body"><div class="item-desc">學習 Python 自動化相關工具與套件，實際撰寫測試腳本，探索自動化流程應用於日常工作的可能性。</div></div>
         </div>
-
         <div class="item" onclick="toggleItem(this)">
           <div class="item-header">
-            <div class="item-top-row">
-              <div style="display:flex;align-items:center;gap:.5rem;">
-                <div class="item-icon">⚡</div>
-                <div class="item-idx">02</div>
-              </div>
-              <span class="item-tag tag-wait">待開始</span>
-            </div>
+            <div class="item-top-row"><div style="display:flex;align-items:center;gap:.5rem;"><div class="item-icon">⚡</div><div class="item-idx">02</div></div><span class="item-tag tag-wait">待開始</span></div>
             <div class="item-name">LLM + Python 簡單自動化</div>
-            <div class="item-progress">
-              <div class="item-prog-label"><span class="item-prog-text">執行進度</span><span class="item-prog-pct">0%</span></div>
-              <div class="item-prog-track"><div class="item-prog-fill" style="width:0%"></div></div>
-            </div>
+            <div class="item-progress"><div class="item-prog-label"><span class="item-prog-text">執行進度</span><span class="item-prog-pct">0%</span></div><div class="item-prog-track"><div class="item-prog-fill" style="width:0%"></div></div></div>
             <div class="item-bottom"><div class="item-hint">// click to expand</div><span class="item-arrow">▼</span></div>
           </div>
           <div class="item-body"><div class="item-desc">結合 LLM 與 Python，實作簡單的 AI 自動化流程，例如自動摘要、文字分類或自動回覆。</div></div>
         </div>
-
       </div>
     </div>
   </div>
@@ -398,55 +300,25 @@ body {
       <div class="sec-chip">03 · Challenges & Solutions</div>
       <div class="slide-title"><div class="title-bar"></div>困難與解決方式</div>
       <div class="prob-hint">點擊卡片展開解決方式</div>
-
       <div class="prob-card" onclick="toggleProb(this)">
-        <div class="prob-top">
-          <div class="prob-icon">🔧</div>
-          <span class="p-lbl lbl-i">ISSUE</span>
-          <span class="p-txt">LLM 生成內容不穩定，容易出現 JSON 格式錯誤或欄位缺漏；在複雜輸入下，也可能產生語意正確但結構不一致的資料。</span>
-          <span class="p-arr">▼</span>
-        </div>
-        <div class="prob-bot">
-          <div class="prob-icon">✅</div>
-          <span class="p-lbl lbl-s">SOLVE</span>
-          <span class="p-sol">透過明確 Prompt 規範輸出格式，與AI工具雙重驗證，確保JSON 結構一致性與資料正確性。</span>
-        </div>
+        <div class="prob-top"><div class="prob-icon">🔧</div><span class="p-lbl lbl-i">ISSUE</span><span class="p-txt">LLM 生成內容不穩定，容易出現 JSON 格式錯誤或欄位缺漏；在複雜輸入下，也可能產生語意正確但結構不一致的資料。</span><span class="p-arr">▼</span></div>
+        <div class="prob-bot"><div class="prob-icon">✅</div><span class="p-lbl lbl-s">SOLVE</span><span class="p-sol">透過明確 Prompt 規範輸出格式，與AI工具雙重驗證，確保JSON 結構一致性與資料正確性。</span></div>
       </div>
-
       <div class="prob-card" onclick="toggleProb(this)">
-        <div class="prob-top">
-          <div class="prob-icon">🔧</div>
-          <span class="p-lbl lbl-i">ISSUE</span>
-          <span class="p-txt">HTML 結構標籤未正確關閉，導致區塊跑到每個頁面都顯示。</span>
-          <span class="p-arr">▼</span>
-        </div>
-        <div class="prob-bot">
-          <div class="prob-icon">✅</div>
-          <span class="p-lbl lbl-s">SOLVE</span>
-          <span class="p-sol">>逐層檢查 div 的開合，找到 Day 5 頁面提早關閉 day-page 的問題，將 Final Message 移回正確的父層內。</span>
-        </div>
+        <div class="prob-top"><div class="prob-icon">🔧</div><span class="p-lbl lbl-i">ISSUE</span><span class="p-txt">HTML 結構標籤未正確關閉，導致區塊跑到每個頁面都顯示。</span><span class="p-arr">▼</span></div>
+        <div class="prob-bot"><div class="prob-icon">✅</div><span class="p-lbl lbl-s">SOLVE</span><span class="p-sol">逐層檢查 div 的開合，找到 Day 5 頁面提早關閉 day-page 的問題，將 Final Message 移回正確的父層內。</span></div>
       </div>
-
       <div class="prob-card" onclick="toggleProb(this)">
-        <div class="prob-top">
-          <div class="prob-icon">💾</div>
-          <span class="p-lbl lbl-i">ISSUE</span>
-          <span class="p-txt">重新整理後自訂清單與勾選狀態全部消失，使用體驗不佳。</span>
-          <span class="p-arr">▼</span>
-        </div>
-        <div class="prob-bot">
-          <div class="prob-icon">✅</div>
-          <span class="p-lbl lbl-s">SOLVE</span>
-          <span class="p-sol">將所有清單資料與勾選狀態改存至 localStorage，並在 DOMContentLoaded 時自動讀取還原。</span>
-        </div>
+        <div class="prob-top"><div class="prob-icon">💾</div><span class="p-lbl lbl-i">ISSUE</span><span class="p-txt">重新整理後自訂清單與勾選狀態全部消失，使用體驗不佳。</span><span class="p-arr">▼</span></div>
+        <div class="prob-bot"><div class="prob-icon">✅</div><span class="p-lbl lbl-s">SOLVE</span><span class="p-sol">將所有清單資料與勾選狀態改存至 localStorage，並在 DOMContentLoaded 時自動讀取還原。</span></div>
       </div>
     </div>
   </div>
 
-  <!-- Slide 5: AI 趨勢 -->
+  <!-- Slide 5: AI 趨勢 ── 僅此頁更動 -->
   <div class="slide">
     <div class="slide-inner">
-      <div class="sec-chip">04 · AI Trend · 2026</div>
+      <div class="sec-chip">04 · AI Trend · 2026.03</div>
       <div class="slide-title"><div class="title-bar"></div>AI 趨勢工具分享</div>
       <div class="ai-wrap">
         <div class="ai-topbar"></div>
@@ -455,20 +327,20 @@ body {
           <div class="ai-wm">AI</div>
           <div class="ai-header">
             <div class="ai-header-left">
-              <div class="ai-chip">TRENDING NOW · 2026</div>
-              <div class="ai-title">Vibe <span class="grad">Coding</span></div>
+              <div class="ai-chip">TECH TREND · 2026.03</div>
+              <div class="ai-title">Meta <span class="grad">AI 全面進攻</span></div>
             </div>
             <div class="ai-stats">
-              <div class="ai-stat-item"><div class="ai-stat-val">2025</div><div class="ai-stat-lbl">年度趨勢</div></div>
-              <div class="ai-stat-item"><div class="ai-stat-val">↑ 3x</div><div class="ai-stat-lbl">生產力提升</div></div>
+              <div class="ai-stat-item"><div class="ai-stat-val">$135B</div><div class="ai-stat-lbl">2026 AI 投資</div></div>
+              <div class="ai-stat-item"><div class="ai-stat-val">30億</div><div class="ai-stat-lbl">每日活躍用戶</div></div>
             </div>
           </div>
-          <div class="ai-desc">由 AI 研究者 Andrej Karpathy 提出的全新開發方式——不需要懂程式語法，用自然語言描述需求，由 AI 負責實作，人負責提需求與測試。大幅降低開發門檻，讓非工程師也能做出完整產品。</div>
+          <div class="ai-desc">Meta AI 動態不斷——訓練晶片「Olympus」夭折後，快速轉向：自研 MTIA 推理晶片全速推進（2027 前出四代、算力提升 25 倍）、Llama 4 模型開源釋出、下一代模型 Avocado 開發中，同時斥資千億補強 Nvidia / AMD / Google 算力，2026 年宣示為「AI 加速年」。</div>
           <div class="ai-grid">
-            <div class="ai-pt"><div class="ai-pt-icon">💬</div><span>Claude / ChatGPT — 對話式生成與修改程式碼</span></div>
-            <div class="ai-pt"><div class="ai-pt-icon">⌨️</div><span>Cursor — AI 整合進程式編輯器，即時協作開發</span></div>
-            <div class="ai-pt"><div class="ai-pt-icon">🚀</div><span>Bolt.new / Replit — 直接生成並部署完整專案</span></div>
-            <div class="ai-pt"><div class="ai-pt-icon">🧠</div><span>未來重點：會跟 AI 溝通需求 &gt; 會寫程式</span></div>
+            <div class="ai-pt"><div class="ai-pt-icon">💀</div><span>Olympus 高階訓練晶片夭折，設計瓶頸難克服，改與 Nvidia、AMD、Google 擴大合作</span></div>
+            <div class="ai-pt"><div class="ai-pt-icon">⚡</div><span>MTIA 推理晶片繼續做！300→500 四代兩年內推出，算力整體提升 25 倍</span></div>
+            <div class="ai-pt"><div class="ai-pt-icon">🦙</div><span>Llama 4 已釋出（Scout / Maverick），下一代閉源模型 Avocado 開發中</span></div>
+            <div class="ai-pt"><div class="ai-pt-icon">🧠</div><span>成立 Meta Superintelligence Labs，挖角 OpenAI／Google 人才，目標打造「個人超智能 AI」</span></div>
           </div>
         </div>
       </div>
@@ -529,13 +401,11 @@ body {
     current = index;
     setTimeout(() => slides[prev].classList.remove('exit-left'), 420);
     slides[current].classList.add('active');
-    // Re-trigger animations
     slides[current].querySelectorAll('.item').forEach((el, i) => {
       el.style.animation = 'none';
       el.offsetHeight;
       el.style.animation = `itemReveal .4s ${i * 0.06 + 0.05}s ease both`;
     });
-    // Re-trigger progress bars
     slides[current].querySelectorAll('.item-prog-fill').forEach(bar => {
       const w = bar.style.width;
       bar.style.width = '0%';
